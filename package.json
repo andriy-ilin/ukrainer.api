@@ -1,0 +1,30 @@
+{
+  "name": "ukrainer.api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000",
+    "test:ci": "mocha --exit",
+    "dev": "nodemon --exec babel-node src/app.js",
+    "prestart": "babel src --out-dir dist",
+    "start": "npm run prestart && node dist/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "dotenv": "^7.0.0",
+    "exponent-server-sdk": "^2.3.1",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.9.2"
+  }
+}
