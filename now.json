@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "ukrainer.api",
+  "builds": [{ "src": "src/routes/**/*.js", "use": "@now/node" }],
+  "routes": [
+    {
+      "src": "src/routes/(?<route>[^/]+)/*.js",
+      "dest": "/$route",
+      "methods": ["POST", "GET"]
+    }
+  ]
+}
